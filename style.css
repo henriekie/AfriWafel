@@ -1,0 +1,184 @@
+/* Style for the game container */
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Header Section */
+.game-header {
+    display: flex;
+    justify-content: space-between; /* Ensures icons are on far left and right */
+    align-items: center;            /* Vertically centers everything */
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;               /* Controls the maximum width of the header */
+    margin: 0 auto -90px auto;       /* Added bottom margin to control spacing below header */
+    width: 100%;
+    box-sizing: border-box;         /* Ensures padding is included in width */
+}
+
+/* Left and Right Sections */
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    justify-content: flex-start;    /* Align the left icon to the far left */
+}
+
+.header-right {
+    justify-content: flex-end;      /* Align the right icon to the far right */
+}
+
+/* Center the title */
+.header-center {
+    flex-grow: 1;                    /* Take up the remaining space to center text */
+    text-align: center;              /* Center the header text */
+}
+
+.header-center h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Styling for the icons */
+.icon-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icon-btn img {
+    width: 20px;                     /* Adjust icon size */
+    height: 20px;
+}
+
+/* Small gap between the icons and the edges */
+.header-left .icon-btn,
+.header-right .icon-btn {
+    margin: 0 20px;
+}
+
+
+
+
+
+
+
+/* Style for the grid container */
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);  /* Creates 5 columns, each 60px wide */
+  grid-template-rows: repeat(5, 60px);     /* Creates 5 rows, each 60px high */
+  gap: 5px;                                /* Adds spacing between grid cells */
+  margin-top: 1px;                        /* Increased top margin to add space between header and grid */
+  justify-content: center;
+}
+
+/* Style for each individual grid cell */
+.grid-cell {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0px solid #000;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative; /* So that we can move the blocks smoothly */
+  transition: transform 10s ease; /* This adds a smooth transition for any transformations */
+}
+
+
+/* Hover effect */
+.grid-cell:hover {
+  background-color: #e0e0e0;
+}
+
+.ghost {
+    position: absolute;  /* Ensure it's positioned freely */
+    opacity: 1; /* Slight transparency */
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+    z-index: 1000; /* Keep it on top */
+}
+
+.dragging {
+    opacity: 0;
+    visibility: hidden; /* Hide the original element fully during drag */
+}
+
+
+#swap-counter {
+    margin-top: 10px;
+	margin-bottom: -50x; /* Reduce or set this value to control the space below */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Cookie Consent Banner Styles */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Keep it above other elements */
+}
+
+.cookie-banner p {
+    display: inline-block;
+    margin: 0;
+    padding-right: 15px;
+}
+
+.cookie-btn {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cookie-btn:hover {
+    background-color: #e6b800;
+}
+
+#share-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
