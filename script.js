@@ -83,7 +83,7 @@ function clearGameState() {
 // Initialize the game by fetching the JSON files
 function initGame() {
     const currentDate = getCurrentDate();
-    const basePath = `/WordGrids/${currentDate}/`;
+    const basePath = `WordGrids/${currentDate}/`;
 	
 	
 	    // If lastPlayed is -1 (no previous save), or the date has changed, clear localStorage
